@@ -1,0 +1,163 @@
+<section>
+	<section data-markdown>
+		## Funciones con varios argumentos
+	</section>
+
+	<section>
+		<h2>Funciones con varios argumentos</h2>
+
+		<p>
+			Las funciones están definidas de la forma \(f: A \rightarrow B\), siendo \(A\) y \(B\) conjuntos. Esta definición nos permite utilizar productos cartesianos generalizados como dominio en la declaración de las funciones.
+		</p>
+
+		<p class="fragment">
+			I.e., \(A = C \times D\) por lo tanto \(f: C \times D \rightarrow B\).
+		</p>
+	</section>
+
+	<section>
+		<h2>Funciones con varios argumentos: Ejemplo</h2>
+
+		<p>
+			La función que calcula el área de un rectángulo es una función que tiene como parámetros de entrada el ancho y el largo del rectángulo que son valores de tipo real y retorna como salida el área del rectángulo. Lo que puede escribirse como:
+			$$areaRectangulo: \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}.$$
+		</p>
+	</section>
+
+	<section>
+		<h2>Funciones con varios argumentos: Ejemplo</h2>
+
+		<p>
+			Para el calculo del área de un rectángulo es necesario conocer el largo y el ancho del rectángulo, a partir de los cuales el área del rectángulo está dada por la expresión \(A_r = l * a\), donde las variables están definidas así:
+		</p>
+
+		<ul class="fragment">
+			<li>\(l\) := Largo del rectángulo</li>
+			<li>\(a\) := Ancho del rectángulo</li>
+			<li>\(A_r\) := Área del rectángulo de largo \(l\) y ancho \(a\)</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Funciones con varios argumentos: Ejemplo</h2>
+
+		<p>
+			Y la función matemática queda definida de la siguiente forma:
+			$$areaRectangulo: \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}$$
+			$$areaRectangulo: (l, a) \rightarrow l * a$$
+		</p>
+	</section>
+
+	<section data-markdown>
+		## Funciones con varios argumentos: Ejemplo
+
+		En este caso lo único que cambia es la firma de la función, así:
+	</section>
+
+	<section data-markdown>
+		## Funciones con varios argumentos: Ejemplo en C++
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+float areaRectangulo(float l, float a)
+{
+	return l * a;
+}
+
+double areaRectangulo(double l, double a)
+{
+	return l * a;
+}
+
+int main()
+{
+	float l = 0;
+	float a = 0;
+	float Ar = 0;
+	cout << "Ingrese el largo del rectangulo: \t";
+	cin >> l;
+	cout << "Ingrese el ancho del rectangulo: \t";
+	cin >> a;
+	Ar = areaRectangulo(l, a);
+	cout << "El area del rectangulo de largo " << l;
+	cout << " y ancho " << a;
+	cout << " es: " << Ar << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Funciones con varios argumentos: Ejemplo en Python
+
+```python
+def areaRectangulo(l, a):
+	return l * a
+
+l = float(input("Ingrese el largo del rectangulo: \t"))
+a = float(input("Ingrese el ancho del rectangulo: \t"))
+Ar = areaRectangulo(l, a)
+print("El area del rectangulo de largo " + str(l), end="")
+print(" y ancho " + str(a), end="")
+print(" es: " + str(Ar))
+```
+	</section>
+
+	<section data-markdown>
+		## Funciones con varios argumentos: Ejemplo
+
+		Note que los conjuntos que hacen parte del producto cartesiano del dominio pueden ser de diferentes tipos:
+	</section>
+
+	<section data-markdown>
+		## Funciones con varios argumentos: Ejemplo en C++
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+char sumaCaracteres(char c, int n)
+{
+	return c + n;
+}
+
+int main()
+{
+	char c = 0;
+	int n = 0;
+	char newC = 0;
+	cout << "Ingrese un caracter: \t";
+	cin >> c;
+	cout << "Ingrese numero: \t";
+	cin >> n;
+	newC = sumaCaracteres(c, n);
+	cout << "La suma del caracter: " << c;
+	cout << " con el numero: " << n;
+	cout << " da como resultado: " << newC << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Funciones con varios argumentos: Ejemplo en Python
+
+```python
+def sumaCaracteres(c, n):
+	return ord(c) + n
+
+c = input("Ingrese un caracter: \t")
+n = int(input("Ingrese numero: \t"))
+newC = chr(sumaCaracteres(c, n))
+print("La suma del caracter: " + str(c), end="")
+print(" con el numero: " + str(n), end="")
+print(" da como resultado: " + newC)
+```
+	</section>
+</section>

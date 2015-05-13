@@ -1,0 +1,165 @@
+<section>
+	<section data-markdown>
+		## Variables Globales y Locales
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+		## Variables Globales: Definición
+
+		Variables definidas generalmente al comienzo del programa (despues de los include/import(s) y antes de cualquier función), que se pueden usar a lo largo de todo el programa*.
+
+		<!-- .element: class="fragment" -->
+		I.e., dentro del algoritmo principal y en cada función definida en el programa.
+
+		<!-- .element: class="fragment" -->
+		* Sujeto a modificadores de accesso.
+		</script>
+	</section>
+
+	<section data-markdown>
+		## Variables Globales: Ejemplo en C++
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int a = 2;
+
+int multiplicar(int b)
+{
+	return a * b;
+}
+
+int main()
+{
+	multiplicar(2);
+	a++;
+	cout << a << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Variables Globales: Ejemplo en Python
+
+```python
+a = 2
+
+def multiplicar(b):
+	return a * b
+
+multiplicar(2)
+a+=1
+print(a)
+```
+	</section>
+
+	<section data-markdown>
+		## Variables Locales: Definición
+
+		Variables que son definidas dentro de cada función y/o procedimiento, y que solo se pueden usar en la función y/o procedimientos en la que son declaradas.
+	</section>
+
+	<section data-markdown>
+		## Variables Locales: Ejemplo en C++
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int sumar(int a)
+{
+	return ++a;
+}
+
+int restar(int a)
+{
+	return --a;
+}
+
+int main()
+{
+	int s = 0;
+	int r = 0;
+	s = sumar(3);
+	r = restar(80);
+	cout << s << endl;
+	cout << r << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Variables Locales: Ejemplo en Python
+
+```python
+def sumar(a):
+	return a + 1
+
+def restar(a):
+	return a - 1
+
+s = sumar(3)
+r = restar(80)
+print(s)
+print(r)
+```
+	</section>
+
+	<section data-markdown>
+		## Variables Globales y Locales: Ejemplo en C++
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+double x = 1.67;
+
+int cuadrado(int x)
+{
+	return x * x;
+}
+
+int main()
+{
+	int c1 = 0;
+	c1 = cuadrado(3);
+	double c2 = x * x;
+	cout << c1 << endl;
+	cout << c2 << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Variables Globales y Locales: Ejemplo en Python
+
+```python
+x = 1.67
+
+def cuadrado(x):
+	return x * x
+
+c1 = cuadrado(3)
+c2 = x * x
+print(c1)
+print(c2)
+```
+	</section>
+
+	<section data-markdown>
+		## Variables Globales y Locales: Recomendaciones
+
+		Una buena técnica de programación es evitar o usar la menor cantidad de variables globales, de tal forma que las funciones y/o procedimientos que se creen no dependan de elementos externos, en este caso las variables globales, para realizar su proceso. El no usar variables globales dentro de una función y/o procedimiento garantiza su fácil depuración y seguimiento.
+	</section>
+</section>

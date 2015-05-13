@@ -1,0 +1,334 @@
+<section>
+	<section data-markdown>
+		## Funciones en Programación
+	</section>
+
+	<section>
+		<h2>Funciones en Programación: Definición</h2>
+
+		<p>
+			Una función, desde el punto de vista de la programación, se define como un proceso que recibe valores de entrada (llamados <b>argumentos</b>) y el <b>retorna</b> un valor resultado.
+		</p>
+
+		<p class="fragment">
+			De la definición matemática:
+			$$f : A \rightarrow B$$
+		</p>
+
+		<p class="fragment">
+			se tiene que \(f\) corresponde al nombre de la función, el conjunto \(A\) corresponde al tipo de los <b>argumentos</b> de dicha función y el conjunto \(B\) que es el rango corresponderá al <b>valor de retorno</b> de dicha función.
+		</p>
+	</section>
+
+	<section data-markdown>
+		## Funciones en Programación: C++
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Espacio para declarar funciones
+
+bool esPar(int x)
+{
+	return x % 2 == 0;
+}
+
+int main()
+{
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Funciones en Programación: Python
+
+```python
+# Espacio para declarar funciones
+
+def esPar(x):
+    return x % 2 == 0
+```
+	</section>
+
+	<section>
+		<h2>Funciones en Programación: Ejemplo</h2>
+
+		<p>
+			Se definirá una función que eleve un número al cubo. Para expresar una función que calculé esta operación, en primera instancia se construye la expresión \(f : \mathbb{R} \rightarrow \mathbb{R}\) que define que la función tiene como entrada (dominio) un número real y como salida (rango) un número real. La declaración de la función quedará de la siguiente forma:
+			$$f: \mathbb{R} \rightarrow \mathbb{R}$$
+			$$f: x 􏰀\rightarrow x^2$$
+		</p>
+	</section>
+
+	<section>
+		<h2>Funciones en Programación: Ejemplo</h2>
+
+		<p>
+			Paso a paso tenemos:
+		</p>
+
+		<ul>
+			<li class="fragment">
+				Primero se escribe el tipo de retorno* (rango). Como es real, el tipo de dato puede ser float o double.
+				
+				<table>
+					<thead>
+						<tr>
+							<th style="text-align:center">C++</th>
+							<th style="text-align:center">Python</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="text-align:left">
+								float
+								<br>
+								double
+							</td>
+							<td style="text-align:left"></td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+		</ul>
+
+		<p class="fragment">* No aplica en el caso de python.</p>
+	</section>
+
+	<section>
+		<h2>Funciones en Programación: Ejemplo</h2>
+
+		<ul>
+			<li>
+				Posteriormente se escribe el nombre de la función f. En el caso de python se debe usar la palabra reservada <b>def</b> antes del nombre de la función.
+
+				<table>
+					<thead>
+						<tr>
+							<th style="text-align:center">C++</th>
+							<th style="text-align:center">Python</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="text-align:left">
+								float f
+								<br>
+								double f
+							</td>
+							<td style="text-align:left">def f</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Funciones en Programación: Ejemplo</h2>
+
+		<ul>
+			<li>
+				Entre paréntesis se coloca el tipo y la variable(s) del dominio. En este caso solamente se tiene la variable x quedando float o double x, para C++. En el caso de python, se escriben las variables entre paréntesis y se coloca el caracter dos puntos ':'.
+
+				<table>
+					<thead>
+						<tr>
+							<th style="text-align:center">C++</th>
+							<th style="text-align:center">Python</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="text-align:left">
+								float f(float x)
+								<br>
+								double f(double x)
+							</td>
+							<td style="text-align:left">def f(x):</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Funciones en Programación: Ejemplo</h2>
+
+		<ul>
+			<li>
+				En las siguientes líneas se escribe la definición de la función entre las llaves* terminando con punto y coma ;* cada linea de la función. Dicha definición de función corresponde al algoritmo ó computo, para generar la salida calculada de la función se utiliza la palabra clave return, de la siguiente manera:
+			</li>
+		</ul>
+
+		<p class="fragment">* En lenguajes como C, C++ o Java</p>
+	</section>
+
+	<section>
+		<h2>Funciones en Programación: Ejemplo</h2>
+
+		<table>
+			<thead>
+				<tr>
+					<th style="text-align:center">C++</th>
+					<th style="text-align:center">Python</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:left">
+						float f(float x)
+						<br>
+						{
+						<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;return x * x * x;
+						<br>
+						}
+						<br>
+						<br>
+						double f(double x)
+						<br>
+						{
+						<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;return x * x * x;
+						<br>
+						}
+					</td>
+					<td style="text-align:left">
+						def f(x):
+						<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;return x * x * x
+						<br>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section data-markdown>
+		## Funciones en Programación: Ejemplo
+
+		Definir una función que calcule la n-ésima potencia de 2.
+	</section>
+
+	<section data-markdown>
+		## Funciones en Programación: Ejemplo en C++
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int potenciaDe2(int x)
+{
+	return 1 << x;
+}
+
+int main()
+{
+	int x = 0;
+	int y = 0;
+	cout << "Ingrese un número: \t";
+	cin >> x;
+	y = potenciaDe2(x);
+	cout << "La " << x << "-esima potencia de 2 es: " << y << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Funciones en Programación: Ejemplo en Python
+
+```python
+def potenciaDe2(x):
+	return 1 << x
+
+x = int(input("Ingrese un número: \t"))
+y = potenciaDe2(x)
+print("La " + str(x) + "-esima potencia de 2 es: " + str(y))
+```
+	</section>
+
+	<section data-markdown>
+		## Funciones en Programación: Ejemplo
+
+		Usando las funciones seno y coseno calcule la tangente.
+	</section>
+
+	<section data-markdown>
+		## Funciones en Programación: Ejemplo en C++
+
+```cpp
+#include &lt;iostream&gt;
+#include &lt;math.h&gt;
+
+using namespace std;
+
+double tangente(double x)
+{
+	double s = sin(x);
+	double c = cos(x);
+	return s / c;
+}
+
+int main()
+{
+	int x = 0;
+	int y = 0;
+	cout << "Ingrese un número: \t";
+	cin >> x;
+	y = tangente(x);
+	cout << "La tangente de " << x << " es: " << y << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Funciones en Programación: Ejemplo en Python
+
+```python
+import numpy as np
+
+def tangente(x):
+	s = np.sin(x)
+	c = np.cos(x)
+	return s / c
+
+x = float(input("Ingrese un número: \t"))
+y = tangente(x)
+print("La tangente de " + str(x) + " es: " + str(y))
+```
+	</section>
+
+	<section>
+		<h2>Funciones en Programación: Anotaciones</h2>
+
+		<ul>
+			<li>
+				<p>
+					Una forma de entender/ver las funciones es como sub-programas que se pueden <b>invocar</b> desde cualquier parte del programa cuantas veces sea necesario.
+				</p>
+
+				<p class="fragment">
+					E.g., desde otra función(es) como la función <i>main</i>* o incluso, desde la misma función.
+				</p>
+			</li>
+			<li class="fragment">
+				Generalmente se usan cuando existen dos o más porciones de algoritmo dentro de un programa que son iguales o muy similares.
+			</li>
+		</ul>
+
+		<p class="fragment">
+			* En python no es necesario declarar una función main.
+		</p>
+	</section>
+</section>

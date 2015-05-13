@@ -1,0 +1,91 @@
+<section>
+	<section data-markdown>
+		## Procedimientos
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+		## Procedimientos: Definición
+
+		En muchos casos existen porciones de código similares que no calculan un valor sino que por ejemplo:
+
+		- Presentan información al usuario
+		- <!-- .element: class="fragment" -->
+		Leen una colección de datos
+		- <!-- .element: class="fragment" -->
+		Calculan mas de un valor
+
+		<!-- .element: class="fragment" -->
+		Sin embargo, como una función debe retornar un único valor este tipo de porciones de código no se podrían codificar como funciones.
+
+		<!-- .element: class="fragment" -->
+		Para superar este inconveniente se creó el concepto de procedimiento.
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+		## Procedimientos: Definición
+
+		Los procedimientos son muy utilizados en los efectos laterales que se pueden llevar a cabo:
+
+		- Escribir en pantalla
+		- <!-- .element: class="fragment" -->
+		Modificar variables
+		- <!-- .element: class="fragment" -->
+		Leer datos
+		- <!-- .element: class="fragment" -->
+		Entre otros
+
+		<!-- .element: class="fragment" -->
+		Un procedimiento se define de la siguiente manera:
+		</script>
+	</section>
+
+	<section data-markdown>
+		## Procedimientos: Ejemplo en C++
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+void imprimir(bool x, char y, double z)
+{
+	cout << "El valor de la variable x es: " << x << endl;
+	cout << "El valor de la variable y es: " << y << endl;
+	cout << "El valor de la variable z es: " << z << endl;
+	cout << endl;
+}
+
+int main()
+{
+	imprimir(false, '.', 2.8);
+	imprimir(2.8, ',', 5.6);
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Procedimientos: Ejemplo en Python
+
+```python
+def imprimir(x, y, z):
+	print("El valor de la variable x es: " + str(bool(x)))
+	print("El valor de la variable y es: " + y)
+	print("El valor de la variable z es: " + str(float(z)))
+	print()
+
+imprimir(False, '.', 2.8)
+imprimir(2.8, ',', 5.6)
+```
+	</section>
+
+	<section data-markdown>
+		## Procedimientos: Consideraciones
+
+		Un procedimiento se puede asimilar a una  función que no retorna un resultado, y que puede retornar más de un valor mediante el uso de __argumentos por referencia__.
+	</section>
+</section>
